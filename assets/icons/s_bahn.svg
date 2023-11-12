@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 560 560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2320,-835.896)">
+        <g id="S-Bahn-Icon" serif:id="S-Bahn Icon" transform="matrix(1,0,0,1,1440,-4.10426)">
+            <rect x="880" y="840" width="560" height="560" style="fill:rgb(20,65,85);"/>
+            <g transform="matrix(0.849004,0,0,0.849004,-972.819,171.82)">
+                <g transform="matrix(4.10576,0,0,4.10576,2333.74,938.412)">
+                    <circle cx="43.41" cy="43.41" r="43.41" style="fill:white;"/>
+                </g>
+                <g transform="matrix(4.29731,0,0,4.29731,2325.79,930.204)">
+                    <path d="M56.6,4.06L41.6,22.82C38.521,26.693 39.146,32.326 43,35.43L54.67,44.84C61.817,50.57 62.972,61.006 57.25,68.16L43.83,84.94C66.759,84.681 85.137,65.883 84.878,42.953C84.678,25.298 73.335,9.7 56.6,4.07" style="fill:rgb(0,151,217);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(4.29731,0,0,4.29731,2325.79,930.204)">
+                    <path d="M45.19,64.03C48.262,60.158 47.637,54.533 43.79,51.43L32.09,42.06C24.93,36.335 23.766,25.891 29.49,18.73L42.96,1.91C20.036,2.131 1.631,20.894 1.852,43.818C2.023,61.517 13.397,77.16 30.18,82.78L45.19,64.03Z" style="fill:rgb(0,151,217);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

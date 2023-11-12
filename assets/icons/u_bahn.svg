@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 560 560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1580,-835.896)">
+        <g id="U-Bahn-Icon" serif:id="U-Bahn Icon" transform="matrix(1,0,0,1,700,-4.10426)">
+            <rect x="880" y="840" width="560" height="560" style="fill:rgb(0,129,201);"/>
+            <g transform="matrix(1,0,0,1,959.968,900.392)">
+                <path d="M172.75,364.78C136.103,353.523 97.595,333.792 80.485,297.54C64.934,265.55 69.346,228.868 68.231,194.48C68.169,153.465 68.174,112.45 68.173,71.43C97.865,71.397 127.556,71.363 157.248,71.33C157.393,128.738 156.956,186.17 157.468,243.56C159.255,269.557 188.109,288.603 212.723,280.026C232.41,274.374 244.882,253.65 242.767,233.633C242.767,179.532 242.767,125.433 242.767,71.333C272.459,71.366 302.15,71.4 331.842,71.433C331.485,130.342 332.646,189.283 330.872,248.173C330.43,280.994 316.463,314.238 289.691,334.12C267.276,350.309 241.389,363.118 213.872,367.358C200.196,368.499 186.152,367.854 172.75,364.786L172.75,364.78Z" style="fill:white;fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
