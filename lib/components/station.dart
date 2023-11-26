@@ -49,8 +49,8 @@ class StationPanel extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 79,
-                  width: 79,
+                  height: 64,
+                  width: 64,
                   margin: EdgeInsets.only(right: 18.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(18.0),
@@ -63,7 +63,7 @@ class StationPanel extends StatelessWidget {
                   child: Text(
                     name,
                     style: TextStyle(
-                      fontSize: 48,
+                      fontSize: 42,
                       color: Color(0xFFCCCC33),
                     ),
                   ),

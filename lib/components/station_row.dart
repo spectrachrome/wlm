@@ -22,7 +22,7 @@ class StationPanelRow extends StatelessWidget {
     };
 
     return Container(
-      height: 63, // Used to be 42
+      height: 56, // Used to be 42
       margin: EdgeInsets.only(bottom: 9.0),
       decoration: BoxDecoration(
         color: Color(0x11FFFFFF),
@@ -37,7 +37,7 @@ class StationPanelRow extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  height: 63,
+                  height: 56,
                   width: 84, // used to be 56
                   decoration: BoxDecoration(
                     color: lineBoxColor,
@@ -46,7 +46,8 @@ class StationPanelRow extends StatelessWidget {
                     child: Text(
                       line.name,
                       style: TextStyle(
-                        fontSize: 36,
+                        fontSize: 40,
+                        color: Colors.white,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w500,
                       ),
@@ -62,7 +63,7 @@ class StationPanelRow extends StatelessWidget {
                       ? line.direction[0].toUpperCase() + line.direction.substring(1).toLowerCase()
                       : line.direction,
                     style: TextStyle(
-                      fontSize: 36,
+                      fontSize: 40,
                       fontFamily: 'Inter',
                     ),
                   ),
@@ -86,7 +87,7 @@ class StationPanelRow extends StatelessWidget {
                       Text(
                         departure,
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: 40,
                           fontFamily: 'Inter',
                           fontWeight: FontWeight.w500,
                         ),

@@ -147,34 +147,42 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
         padding: EdgeInsets.only(
           left: config['viewMargin'] as double,
           right: config['viewMargin'] as double,
-          top: config['viewMargin'] as double,
+          top: 12.0,
           bottom: 0.0,
         ),
         decoration: BoxDecoration(
           color: Color(0xFF000f17),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: Stack(
           children: [
-            Navbar(),
+            Positioned(
+              top: 36,
+              right: 24,
+              child: Navbar(),
+            ),
 
-            Container(
-              margin: EdgeInsets.only(top: 30.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width - 2 * (config['viewMargin'] as double),
-                    child: panels[2],
-                  ),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 30.0),
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [panels[1], panels[0]],
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width - 2 * (config['viewMargin'] as double),
+                        child: panels[2],
+                      ),
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [panels[1], panels[0]],
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
