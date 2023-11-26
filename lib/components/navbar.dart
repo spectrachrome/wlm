@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../config.dart';
 
-const LOGO_HEIGHT = 28.0;
+const LOGO_HEIGHT = 42.0;
 
 class Navbar extends StatelessWidget {
   Navbar();
@@ -10,7 +10,7 @@ class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // margin: EdgeInsets.only(left: 36.0, top: 0, right: 36.0, bottom: 36.0),
+      margin: EdgeInsets.only(left: 0.0, top: 12.0, right: 0.0, bottom: 0.0),
       height: config['navbarHeight'],
       decoration: BoxDecoration(
         color: Colors.transparent,

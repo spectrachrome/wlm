@@ -144,11 +144,17 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
     return Scaffold(
       // appBar: AppBar(title: Text('Real Time Info')),
       body: Container(
-        padding: EdgeInsets.all(config['viewMargin'] as double),
+        padding: EdgeInsets.only(
+          left: config['viewMargin'] as double,
+          right: config['viewMargin'] as double,
+          top: config['viewMargin'] as double,
+          bottom: 0.0,
+        ),
         decoration: BoxDecoration(
           color: Color(0xFF000f17),
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Navbar(),
 

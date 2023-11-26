@@ -46,7 +46,7 @@ class StationPanelRow extends StatelessWidget {
                     child: Text(
                       line.name,
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 24,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w500,
                       ),
@@ -62,7 +62,7 @@ class StationPanelRow extends StatelessWidget {
                       ? line.direction[0].toUpperCase() + line.direction.substring(1).toLowerCase()
                       : line.direction,
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 24,
                       fontFamily: 'Inter',
                     ),
                   ),
@@ -78,7 +78,7 @@ class StationPanelRow extends StatelessWidget {
                   child: Text(
                     departure,
                     style: TextStyle(
-                      fontSize: 21,
+                      fontSize: 24,
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w500,
                     ),

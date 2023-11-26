@@ -16,6 +16,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold, color: Colors.white),
+          headline2: TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold, color: Colors.white),
+          headline3: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, color: Colors.white),
+          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          bodyText1: TextStyle(fontSize: 14.0, fontFamily: 'Inter', color: Color(0xFFcccccc)),
+          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Inter', color: Color(0xFFcccccc)),
+        ),
         useMaterial3: true,
       ),
       darkTheme: ThemeData(

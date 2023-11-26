@@ -44,14 +44,14 @@ class StationPanel extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 24.0),
+            margin: EdgeInsets.only(bottom: 18.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 42,
-                  width: 42,
-                  margin: EdgeInsets.only(right: 9.0),
+                  height: 52,
+                  width: 52,
+                  margin: EdgeInsets.only(right: 18.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10.0),
                     child: type == StationType.U
@@ -63,7 +63,8 @@ class StationPanel extends StatelessWidget {
                   child: Text(
                     name,
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 32,
+                      color: Color(0xFFCCCC33),
                     ),
                   ),
                 ),
