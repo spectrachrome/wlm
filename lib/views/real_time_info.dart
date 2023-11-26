@@ -154,7 +154,7 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
           color: Color(0xFF000f17),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Navbar(),
 
@@ -165,13 +165,13 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width - 2 * (config['viewMargin'] as double),
-                    child: panels[0],
+                    child: panels[2],
                   ),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [panels[1], panels[2]],
+                    children: [panels[1], panels[0]],
                   ),
                 ],
               ),

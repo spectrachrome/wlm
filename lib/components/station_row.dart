@@ -22,7 +22,7 @@ class StationPanelRow extends StatelessWidget {
     };
 
     return Container(
-      height: 42,
+      height: 63, // Used to be 42
       margin: EdgeInsets.only(bottom: 9.0),
       decoration: BoxDecoration(
         color: Color(0x11FFFFFF),
@@ -37,8 +37,8 @@ class StationPanelRow extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  height: 42,
-                  width: 56,
+                  height: 63,
+                  width: 84, // used to be 56
                   decoration: BoxDecoration(
                     color: lineBoxColor,
                   ),
@@ -46,7 +46,7 @@ class StationPanelRow extends StatelessWidget {
                     child: Text(
                       line.name,
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 36,
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w500,
                       ),
@@ -62,7 +62,7 @@ class StationPanelRow extends StatelessWidget {
                       ? line.direction[0].toUpperCase() + line.direction.substring(1).toLowerCase()
                       : line.direction,
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 36,
                       fontFamily: 'Inter',
                     ),
                   ),
@@ -71,17 +71,29 @@ class StationPanelRow extends StatelessWidget {
             ),
 
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: line.upcomingDepartures.map<Widget>((departure) {
                 return Container(
                   margin: EdgeInsets.only(left: 12.0),
-                  width: 36,
-                  child: Text(
-                    departure,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: 'Inter',
-                      fontWeight: FontWeight.w500,
-                    ),
+                  decoration: BoxDecoration(
+                    // for debug only
+                    color: Color(0x00FFFFFF),
+                  ),
+                  width: 70,
+                  height: 63,
+                  child: Row(
+                    children: [
+                      Text(
+                        departure,
+                        style: TextStyle(
+                          fontSize: 36,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                   ),
                 );
               }).toList(),

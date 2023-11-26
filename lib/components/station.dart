@@ -44,16 +44,16 @@ class StationPanel extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: EdgeInsets.only(bottom: 18.0),
+            margin: EdgeInsets.only(bottom: 36.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 52,
-                  width: 52,
+                  height: 79,
+                  width: 79,
                   margin: EdgeInsets.only(right: 18.0),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(18.0),
                     child: type == StationType.U
                       ? SvgPicture.asset('assets/icons/u_bahn.svg')
                       : SvgPicture.asset('assets/icons/s_bahn.svg'),
@@ -63,7 +63,7 @@ class StationPanel extends StatelessWidget {
                   child: Text(
                     name,
                     style: TextStyle(
-                      fontSize: 32,
+                      fontSize: 48,
                       color: Color(0xFFCCCC33),
                     ),
                   ),

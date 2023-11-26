@@ -10,7 +10,7 @@ class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 0.0, top: 12.0, right: 0.0, bottom: 0.0),
+      margin: EdgeInsets.only(left: 0.0, top: 12.0, right: 0.0, bottom: 24.0),
       height: config['navbarHeight'],
       decoration: BoxDecoration(
         color: Colors.transparent,
