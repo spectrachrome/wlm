@@ -1,6 +1,9 @@
-# wlm
 
-A new Flutter project.
+![IMG_0641_WienerLinienMonitor_Mauerbach2_Smaller](https://github.com/spectrachrome/wlm/assets/94269527/9a19edbd-a0e5-43ac-bd0a-dc5b0c34cbc9)
+
+# WienerLinienMonitor
+
+`wlm` is a graphical front-end for the Wiener Linien API which displays real-time public transport data on a monitor.
 
 ## Getting Started
 
