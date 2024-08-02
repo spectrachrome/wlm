@@ -17,13 +17,15 @@ class RealTimeInfo extends StatefulWidget {
 
 class _RealTimeInfoState extends State<RealTimeInfo> {
   bool useMockData = false;
-  dynamic realTimeData; // replace 'dynamic' with a proper type based on your data
+  dynamic realTimeData;
+  dynamic wlmConfig;
   Timer? timer;
 
   @override
   void initState() {
     super.initState();
     getData();
+    fetchConfig();
     timer = Timer.periodic(Duration(seconds: 30), (Timer t) => getData());
   }
 
@@ -42,6 +44,24 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
       });
     } else {
       fetchRealTimeData();
+    }
+  }
+
+  Future<void> fetchConfig() async {
+    String url = 'http://192.168.0.24/wlm_config.json'; // Your API URL
+    try {
+      var res = await http.get(Uri.parse(url));
+      if (res.statusCode == 200) {
+        setState(() {
+          wlmConfig = json.decode(res.body);
+        });
+      } else {
+        // Handle error
+        print("Failure: ${res.statusCode}");
+      }
+    } catch (e) {
+      // Handle network error
+      print("Error: $e");
     }
   }
 
@@ -67,6 +87,14 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
     return realTimeData != null ? realTimeData['data']['monitors'] : [];
   }
 
+  bool isDepartureTooSoon(Map<String, dynamic> departure) {
+    return departure['departureTime']['countdown'] < 3;
+  }
+
+  bool isDepartureTooLate(Map<String, dynamic> departure) {
+    return departure['departureTime']['countdown'] > 30;
+  }
+
   List<Map<String, dynamic>> get stations {
     var stationsMap = <String, Map<String, dynamic>>{};
 
@@ -89,9 +117,28 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
         // Debugging: Print line name
         print('Processing line: ${line['name']}');
 
-        newLine['departures'] = line['departures']['departure'].map((departure) {
+        var deps = line['departures']['departure'];
+        
+        // Filter out any that are too early or too late
+        var filteredDepartures = deps
+          .where((departure) => !isDepartureTooSoon(departure))
+          .where((departure) => !isDepartureTooLate(departure));
+
+        // Extract the 
+        newLine['departures'] = filteredDepartures.map((departure) {
+          print(departure['departureTime']['countdown']);
           return departure['departureTime'];
         }).toList();
+/*
+        newLine['departures'] = line['departures']['departure']
+          // Remove departures that are too early or too late
+          .where((departure) => departure['departureTime']['countdown'] > 3)
+          .map((departure) {
+            print(departure['departureTime']['countdown']);
+            return departure['departureTime'];
+          })
+          .toList();
+*/
 
         var stationEntry = stationsMap[stationTitle];
         if (stationEntry != null) {
@@ -156,7 +203,7 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
         child: Stack(
           children: [
             Positioned(
-              top: 36,
+              top: 24,
               right: 24,
               child: Navbar(),
             ),
@@ -166,9 +213,9 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
               children: [
                 Container(
                   margin: EdgeInsets.only(top: 30.0),
-                  child: Column(
+                  child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: panels/*[
                       Container(
                         width: MediaQuery.of(context).size.width - 2 * (config['viewMargin'] as double),
                         child: panels[2],
@@ -179,7 +226,7 @@ class _RealTimeInfoState extends State<RealTimeInfo> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [panels[1], panels[0]],
                       ),
-                    ],
+                    ]*/,
                   ),
                 ),
               ],

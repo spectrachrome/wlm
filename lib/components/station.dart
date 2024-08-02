@@ -37,8 +37,8 @@ class StationPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: (MediaQuery.of(context).size.width - 3 * 36.0) / 2,
-      margin: EdgeInsets.only(bottom: 36.0),
+      width: 450,
+      margin: EdgeInsets.only(right: 10.0),
       // padding: EdgeInsets.only(left: 18.0, top: 18.0, right: 18.0, bottom: 6.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,10 +60,12 @@ class StationPanel extends StatelessWidget {
                   ),
                 ),
                 Container(
+                  width: 300,
                   child: Text(
                     name,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
-                      fontSize: 42,
+                      fontSize: 36,
                       color: Color(0xFFCCCC33),
                     ),
                   ),
